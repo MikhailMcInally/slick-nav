@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Balsamiq Sans', sans-serif;
+}
+
+$black: #030f21;
+$coalblue: #192638;
+$coalblack: #16151a;
+$almostwhite: #f7fdff;
+$tingedwhite: #ece8dd;
+$darkwhite: #f4f4f4;
+
+
+a {
+    text-decoration: none;
+    color: $almostwhite;
+}
+
+body {
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    position: absolute;
+
+    .nav-top {
+        padding: 0 25px;
+
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .lang {
+            font-size: 13px;
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 7.5px;
+            color: $almostwhite;
+            border: 1px solid transparent;
+            position: relative;
+
+
+            &:hover {
+                border-color: $almostwhite;
+            }
+
+            i {
+                display: none;
+            }
+
+            &:hover i {
+                display: block;
+            }
+
+            .hidden-menu {
+                position: absolute;
+                margin-top: 48px;
+                list-style: none;
+                left: 0;
+                width: 100%;
+                background-color: $almostwhite;
+
+                li {
+                    color: $black;
+                    text-align: center;
+                }
+
+                li:nth-child(2n) {
+                    background-color: $tingedwhite;
+                }
+            }
+        }
+
+        .logo {
+            font-size: 18px;
+            letter-spacing: 10px;
+            font-weight: 700;
+            color: $almostwhite;
+            text-transform: uppercase;
+            margin-right: 110px;
+        }
+
+        .cart {
+            font-size: 16px;
+            color: $almostwhite;
+        }
+    }
+
+    .nav-bottom {
+        padding: 0 25px;
+
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        background-color: $coalblack;
+
+        .links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-size: 13px;
+            text-transform: uppercase;
+
+
+            .item {
+                min-width: 60px;
+                margin: 0 25px;
+                position: relative;
+
+                .line-container {
+                    position: absolute;
+                    width: 100%;
+                    margin-top: 1px;
+                    display: flex;
+                    justify-content: center;
+
+                    .line {
+                        background-color: $almostwhite;
+                        height: 1px;
+                        width: 0%;
+                        transition: all 0.2s;
+
+                    }
+                }
+
+                &:hover .line {
+                    width: 95%;
+                    height: 1.5px;
+                }
+            }
+        }
+    }
+
+}
+
+.masthead {
+    height: 600px;
+    background-color: $coalblack;
+}
